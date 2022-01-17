@@ -1,11 +1,29 @@
-# For PCBs designed using KiCad: http://www.kicad-pcb.org/
-# Format documentation: http://kicad-pcb.org/help/file-formats/
+Outputs/
+
+# Outputs of KiBot
+kibot_errors.filter
+gerbers/
+*.ogv
+eeschema_*.log
+recordmydesktop_*.log
+setxkbmap_*.log
+
+*.kicad_pro-bak
+
+################################################################################
+# Github template gitignore
+################################################################################
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
 
 # Temporary files
 *.000
 *.bak
 *.bck
 *.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
 *.sch-bak
 *~
 _autosave-*
