@@ -24,8 +24,8 @@ preflight:
       error: 'silk_over_copper'
       regex:  'pad 1 \[Net-\(R2-Pad2\)\] of SW2'
     - filter: 'USB silkscreen over edge'
-      error: 'silk_over_copper'
-      regex:  '132.0000 mm, 32.0000 mm'
+      error: 'silk_overlap'
+      regex:  '154.1780 mm, 91.4400 mm'
 
 outputs:
   - name: PDF_SCH
@@ -44,23 +44,23 @@ outputs:
       use_alt: true
       number: 1
 
-  - name: 'PCB_DRAW_TOP'
-    comment: "Draw PCB - top"
-    type: pcbdraw
-    dir: ./
-    options:
-      output: '%f_pcbdraw_top.%x'
-      format: jpg
-      bottom: false
+  # - name: 'PCB_DRAW_TOP'
+  #   comment: "Draw PCB - top"
+  #   type: pcbdraw
+  #   dir: ./
+  #   options:
+  #     output: '%f_pcbdraw_top.%x'
+  #     format: jpg
+  #     bottom: false
 
-  - name: 'PCB_DRAW_BOTTOM'
-    comment: "Draw PCB - bottom"
-    type: pcbdraw
-    dir: ./
-    options:
-      output: '%f_pcbdraw_bottom.%x'
-      format: jpg
-      bottom: true
+  # - name: 'PCB_DRAW_BOTTOM'
+  #   comment: "Draw PCB - bottom"
+  #   type: pcbdraw
+  #   dir: ./
+  #   options:
+  #     output: '%f_pcbdraw_bottom.%x'
+  #     format: jpg
+  #     bottom: true
 
   - name: '3D_STEP'
     comment: "3D model in STEP format"
