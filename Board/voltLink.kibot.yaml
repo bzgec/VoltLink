@@ -44,23 +44,25 @@ outputs:
       use_alt: true
       number: 1
 
-  # - name: 'PCB_DRAW_TOP'
-  #   comment: "Draw PCB - top"
-  #   type: pcbdraw
-  #   dir: ./
-  #   options:
-  #     output: '%f_pcbdraw_top.%x'
-  #     format: jpg
-  #     bottom: false
+  - name: 'PCB_DRAW_TOP'
+    comment: "Draw PCB - top"
+    type: pcbdraw
+    dir: ./
+    options:
+      output: '%f_pcbdraw_top.%x'
+      format: jpg
+      bottom: false
+      show_components: all
 
-  # - name: 'PCB_DRAW_BOTTOM'
-  #   comment: "Draw PCB - bottom"
-  #   type: pcbdraw
-  #   dir: ./
-  #   options:
-  #     output: '%f_pcbdraw_bottom.%x'
-  #     format: jpg
-  #     bottom: true
+  - name: 'PCB_DRAW_BOTTOM'
+    comment: "Draw PCB - bottom"
+    type: pcbdraw
+    dir: ./
+    options:
+      output: '%f_pcbdraw_bottom.%x'
+      format: jpg
+      bottom: true
+      show_components: all
 
   - name: '3D_STEP'
     comment: "3D model in STEP format"
@@ -86,12 +88,16 @@ outputs:
   #     output: '%f_3d.%x'
   #     ray_tracing: false
 
-  # - name: PDF_PCB
-  #   comment: 'Print PCB layers to PDF'
-  #   type: pdf_pcb_print
-  #   dir: ./
-  #   options:
-  #     output: '%f_pcb.%x'
+  - name: PDF_PCB
+    comment: 'Print PCB layers to PDF'
+    type: pdf_pcb_print
+    dir: ./
+    layers: all
+    options:
+      output: '%f_pcb.%x'
+      separated: true
+      scaling: 1.0
+      plot_sheet_reference: true
 
 import:
   - ../Res/KiBot/gerberConfig/JLCPCB_my.kibot.yaml
