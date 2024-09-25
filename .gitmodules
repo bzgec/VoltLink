@@ -1,3 +1,6 @@
 [submodule "Board/kicadLib"]
 	path = Board/kicadLib
 	url = git@github.com:bzgec/kicadLib.git
+[submodule "cp210x-cfg"]
+	path = cp210x-cfg
+	url = https://github.com/cr1tbit/cp210x-cfg.git

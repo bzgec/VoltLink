@@ -7,6 +7,11 @@
 * Current version: *0.1*
 * link:./CHANGELOG.adoc[Changelog]
 
+To enable TX and RX LEDs use `cp210x-cfg`.
+1. Go to `cp210x-cfg` folder
+2. `make`
+3. `./cp210x-cfg -L 1`
+
 '''
 
 == Original author's README - ish
